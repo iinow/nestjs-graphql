@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Person {
+  """Example field (placeholder)"""
+  id: Int!
+
+  """모모모"""
+  content: String!
+}
+
+type Query {
+  personList: [Person!]!
+  person(id: Int): Person!
+}
+
+type Mutation {
+  createPerson(createPersonInput: CreatePersonInput!): Person
+  updatePerson(updatePersonInput: UpdatePersonInput!): Person!
+  removePerson(id: Int!): Person!
+}
+
+input CreatePersonInput {
+  """아썅/.."""
+  myName: String!
+}
+
+input UpdatePersonInput {
+  """아썅/.."""
+  myName: String
+  id: Int
+}
