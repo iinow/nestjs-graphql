@@ -10,15 +10,25 @@ type Person {
   content: String!
 }
 
+type Config {
+  """Example field (placeholder)"""
+  exampleField: String!
+}
+
 type Query {
   personList: [Person!]!
   person(id: Int): Person!
+  configs: [Config!]!
+  config(id: Int!): Config!
 }
 
 type Mutation {
   createPerson(createPersonInput: CreatePersonInput!): Person
   updatePerson(updatePersonInput: UpdatePersonInput!): Person!
   removePerson(id: Int!): Person!
+  createConfig(createConfigInput: CreateConfigInput!): Config!
+  updateConfig(updateConfigInput: UpdateConfigInput!): Config!
+  removeConfig(id: Int!): Config!
 }
 
 input CreatePersonInput {
@@ -30,4 +40,15 @@ input UpdatePersonInput {
   """아썅/.."""
   myName: String
   id: Int
+}
+
+input CreateConfigInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateConfigInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
 }
